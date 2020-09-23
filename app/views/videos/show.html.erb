@@ -1,2 +1,11 @@
-<h1>Videos#show</h1>
-<p>Find me in app/views/videos/show.html.erb</p>
+<% content_for :head_stylesheets do %>
+  <%= stylesheet_link_tag "https://vjs.zencdn.net/7.8.4/video-js.css" %>
+<% end %>
+
+<h1>VideoJS Player</h1>
+
+<video id="adequate-player" class="video-js" controls poster="https://vjs.zencdn.net/v/oceans.png">
+  <source src="https://vjs.zencdn.net/v/oceans.mp4">
+</video>
+
+<%= javascript_include_tag  "https://vjs.zencdn.net/7.8.4/video.js" %>
