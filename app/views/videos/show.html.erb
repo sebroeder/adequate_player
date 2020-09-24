@@ -11,7 +11,9 @@
 <%= javascript_include_tag  "https://vjs.zencdn.net/7.8.4/video.js" %>
 
 <script>
-    videojs("adequate-player").on('pause', function () {
-        alert("Player paused.");
+    videojs("adequate-player").ready(function () {
+        this.on("pause", function () {
+            alert("Player paused.");
+        });
     });
 </script>
